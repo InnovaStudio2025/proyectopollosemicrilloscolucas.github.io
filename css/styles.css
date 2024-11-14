@@ -60,14 +60,25 @@ button:hover {
     margin: 10px;
     
 }
-.side-images {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-.side-images img {
-    width: 60%;
-}   
+    /* Tamaño específico para la imagen del cronograma de actividades */
+    #cronograma img {
+        
+         /* Ajusta el tamaño de la imagen del cronograma */
+            display: flex;
+            border-radius: 0%;
+            margin-bottom: 2px;
+            width: 1000px; /* tamaño de la imagen 120x120 */
+            height: 530px;
+            margin: -500px;
+            padding: 10px; 
+            margin: -2%;
+            gap: 100px;
+        
+        }   
+        .visible { 
+            display: block; 
+        }
+   
 footer { 
     background: linear-gradient(to right, #8ed87f, #4CAF50); 
     padding: 20px; 
