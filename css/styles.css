@@ -261,7 +261,7 @@ tr:hover {
     background-color: #d6f5e1;
 }
 .full-width {
-    background:linear-gradient(to bottom, rgb(51, 226, 66), #8de4ae);
+    background: linear-gradient(to right, #ad8607, #ffd000); 
     color: black;
     font-weight: bold;
     text-align: center;
