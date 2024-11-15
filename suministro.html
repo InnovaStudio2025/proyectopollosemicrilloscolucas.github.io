@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Grado - Suministro de Comida</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .tabla-container {
+            width: calc(100% - 10cm); /* Deja 5 cm de margen a cada lado */
+            margin: 20px auto;
+            display: none; /* Oculta la tabla por defecto */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            width: 5cm; /* Ancho de cada columna */
+            padding: 15px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        td {
+            border-bottom: 1px solid #ddd;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .highlight {
+            background-color: #e0f7fa;
+        }
+        .full-width {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        button {
+            display: block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px auto;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <button onclick="toggleTable()">Suministro de Comida</button>
+</nav>
+
+<main>
+    <section id="suministro" class="content-section visible">
+        <h2>Suministro de Comida</h2>
+        <h1>Informe Anual de Suministro de Comida</h1>
+
+        <div class="tabla-container" id="tablaSuministro">
+            <table>
+                <tr>
+                    <th>Mes</th>
+                    <th>Semana</th>
+                    <th>Tipo de Alimento</th>
+                    <th>Cantidad Suministrada (kg)</th>
+                    <th>Porcentaje de Proteína</th>
+                    <th>Número de Raciones</th>
+                    <th>Momento del Día</th>
+                </tr>
+                <tr class="highlight">
+                    <td>Enero</td>
+                    <td>Semana 1</td>
+                    <td>Pre-iniciador</td>
+                    <td>150</td>
+                    <td>22%</td>
+                    <td>3</td>
+                    <td>Mañana, Tarde, Noche</td>
+                </tr>
+                <tr>
+                    <td>Enero</td>
+                    <td>Semana 2</td>
+                    <td>Pre-iniciador</td>
+                    <td>160</td>
+                    <td>22%</td>
+                    <td>3</td>
+                    <td>Mañana, Tarde, Noche</td>
+                </tr>
+                <tr class="highlight">
+                    <td>Enero</td>
+                    <td>Semana 3</td>
+                    <td>Iniciador</td>
+                    <td>180</td>
+                    <td>20%</td>
+                    <td>3</td>
+                    <td>Mañana, Tarde, Noche</td>
+                </tr>
+                <tr>
+                    <td>Enero</td>
+                    <td>Semana 4</td>
+                    <td>Iniciador</td>
+                    <td>190</td>
+                    <td>20%</td>
+                    <td>3</td>
+                    <td>Mañana, Tarde, Noche</td>
+                </tr>
+                <tr class="full-width">
+                    <td colspan="7">Segunda Cochada de Pollos</td>
+                </tr>
+                <!-- Febrero -->
+                <tr class="highlight">
+                    <td>Febrero</td>
+                    <td>Semana 1</td>
+                    <td>Iniciador</td>
+                    <td>200</td>
+                    <td>20%</td>
+                    <td>3</td>
+                    <td>Mañana, Tarde, Noche</td>
+                </tr>
+                <tr>
+                    <td>Febrero</td>
+                    <td>Semana 2</td>
+                    <td>Desarrollador</td>
+                    <td>220</td>
+                    <td>18%</td>
+                    <td>3</td>
+                    <td>Mañana, Tarde, Noche</td>
+                </tr>
+                <tr class="highlight">
+                    <td>Febrero</td>
+                    <td>Semana 3</td>
+                    <td>Desarrollador</td>
+                    <td>230</td>
+                    <td>18%</td>
+                    <td>3</td>
+                    <td>Mañana, Tarde, Noche</td>
+                </tr>
+                <tr>
+                    <td>Febrero</td>
+                    <td>Semana 4</td>
+                    <td>Engordador</td>
+                    <td>250</td>
+                    <td>16%</td>
+                    <td>3</td>
+                    <td>Mañana, Tarde, Noche</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+</main>
+
+<script>
+    function toggleTable() {
+        const table = document.getElementById("tablaSuministro");
+        table.style.display = table.style.display === "none" || table.style.display === "" ? "block" : "none";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Grado - Cronograma de Actividades</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .tabla-container {
+            width: calc(100% - 10cm); /* Deja 5 cm de margen a cada lado */
+            margin: 20px auto;
+            display: none; /* Oculta la tabla por defecto */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        td {
+            border-bottom: 1px solid #ddd;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .total-row {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        button {
+            display: block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px auto;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <button onclick="toggleTable()">Cronograma de Actividades</button>
+</nav>
+
+<main>
+    <section id="cronograma" class="content-section">
+        <h1>Informe de Suministro de Comida</h1>
+
+        <div class="tabla-container" id="tablaCronograma">
+            <table>
+                <tr>
+                    <th>Cantidad</th>
+                    <th>Unidades</th>
+                    <th>Valor unitario</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>Pollos</td>
+                    <td>60</td>
+                    <td>$2.500</td>
+                    <td>$150.000</td>
+                </tr>
+                <tr>
+                    <td>Concentrado iniciación</td>
+                    <td>3 bultos</td>
+                    <td>$100.000</td>
+                    <td>$300.000</td>
+                </tr>
+                <tr>
+                    <td>Concentrado engorde</td>
+                    <td>2 ½ bultos</td>
+                    <td>$100.000</td>
+                    <td>$250.000</td>
+                </tr>
+                <tr>
+                    <td>Rumiante</td>
+                    <td>½ bulto</td>
+                    <td>$25.000</td>
+                    <td>$25.000</td>
+                </tr>
+                <tr>
+                    <td>Cuchuco de maíz</td>
+                    <td>½ bulto</td>
+                    <td>$45.000</td>
+                    <td>$45.000</td>
+                </tr>
+                <tr>
+                    <td>Maya negra</td>
+                    <td>10 metros</td>
+                    <td>$1.800</td>
+                    <td>$18.000</td>
+                </tr>
+                <tr>
+                    <td>Mano de obra</td>
+                    <td>1 día, 1 hora</td>
+                    <td>$40.000</td>
+                    <td>$55.000</td>
+                </tr>
+                <tr class="total-row">
+                    <td colspan="3">Total</td>
+                    <td>$843.000</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+</main>
+
+<script>
+    function toggleTable() {
+        const table = document.getElementById("tablaCronograma");
+        table.style.display = table.style.display === "none" || table.style.display === "" ? "block" : "none";
+    }
+</script>
+
+</body>
+</html>
+

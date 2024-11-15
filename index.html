@@ -7,50 +7,8 @@
     <title>Proyecto de Grado - Producción de Pollos Semicriollos</title>
     <link rel="stylesheet" href="css/styles.css" />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <style>
-   /* Estilos de la tabla */
-   .tabla-container {
-            width: calc(200% - 10cm); /* Deja 5 cm de margen a cada lado */
-            margin: 20px auto;
-            display: none; /* Oculta la tabla por defecto */
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: #b5e9c2;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        th, td {
-            width: 50cm; /* Ancho de cada columna */
-            padding: 5px;
-            text-align: center;
-        }
-        th {
-            background-color: #33c533;
-            color: black;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        td {
-            border-bottom: 2px solid #f0e0e0;
-        }
-        tr:hover {
-            background:linear-gradient(to bottom, rgb(51, 226, 66), #8de4ae);
-        }
-        .highlight {
-            background-color: #d6f5e1;
-        }
-        .full-width {
-            background:linear-gradient(to bottom, rgb(51, 226, 66), #8de4ae);
-            color: black;
-            font-weight: bold;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-</style>
+
+
 </head>
 <body>
 
@@ -60,10 +18,10 @@
         <h1>Producción de Pollos Semicriollos</h1>
     </div>
     <div class="social-links">
-        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+        <a href="https://www.facebook.com/share/1B6vHGkTiR/?mibextid=qi2Omg" target="_blank" aria-label="Facebook">
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
         </a>
-        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+        <a href="https://www.instagram.com/la_granja_colucas?igsh=YzljYTk1ODg3Zg==" target="_blank" aria-label="Instagram">
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
         </a>
     </div>
@@ -74,8 +32,9 @@
     <button onclick="openSection('suministro')">Suministro de Comida</button>
     <button onclick="openSection('cronograma')">Cronograma</button>
     <button onclick="openSection('presupuesto')">Presupuesto</button>
-    <button onclick="openSection('anexos')">Anexos</button>
+    <button onclick="loadAnexos()">Anexos</button>
 </nav>
+
 
 <main>
     <section id="inicio" class="content-section visible"> 
@@ -123,104 +82,226 @@
                             <th>Momento del Día</th>
                         </tr>
                         <tr class="full-width">
-                            <td colspan="7">Primera Cochada de Pollos</td>
+                            <td colspan="7">Primera Compra de Pollos</td>
                         </tr>
                         <tr class="highlight">
-                            <td>Enero</td>
-                            <td>Semana 1</td>
-                            <td>Pre-iniciador</td>
-                            <td>150</td>
-                            <td>22%</td>
-                            <td>3</td>
-                            <td>Mañana, Tarde, Noche</td>
-                        </tr>
-                        <tr>
-                            <td>Enero</td>
-                            <td>Semana 2</td>
-                            <td>Pre-iniciador</td>
-                            <td>160</td>
-                            <td>22%</td>
-                            <td>3</td>
-                            <td>Mañana, Tarde, Noche</td>
-                        </tr>
-                        <tr class="highlight">
-                            <td>Enero</td>
+                            <td>Abril</td>
                             <td>Semana 3</td>
                             <td>Iniciador</td>
-                            <td>180</td>
-                            <td>20%</td>
+                            <td>150g</td>
+                            <td>21%</td>
                             <td>3</td>
                             <td>Mañana, Tarde, Noche</td>
                         </tr>
                         <tr>
-                            <td>Enero</td>
+                            <td>Abril</td>
                             <td>Semana 4</td>
                             <td>Iniciador</td>
-                            <td>190</td>
-                            <td>20%</td>
+                            <td>160g</td>
+                            <td>21%</td>
                             <td>3</td>
                             <td>Mañana, Tarde, Noche</td>
                         </tr>
+                        <tr class="highlight">
+                            <td>Mayo</td>
+                            <td>Semana 1</td>
+                            <td>Iniciador</td>
+                            <td>180g</td>
+                            <td>21%</td>
+                            <td>3</td>
+                            <td>Mañana, Tarde, Noche</td>
+                        </tr>
+                        <tr>
+                            <td>Mayo</td>
+                            <td>Semana 2</td>
+                            <td>Engorde</td>
+                            <td>190g</td>
+                            <td>21%</td>
+                            <td>3</td>
+                            <td>Mañana, Tarde, Noche</td>
+                        </tr>
+                    <tr class="highlight">
+                        <td>Mayo</td>
+                        <td>Semana 3</td>
+                        <td>Engorde/ Yuca cocinada y picada</td>
+                        <td>200g</td>
+                        <td>21%</td>
+                        <td>3</td>
+                        <td>Mañana, Tarde, Noche</td>
+                    </tr>
+                    <tr>
+                        <td>Mayo</td>
+                        <td>Semana 4</td>
+                        <td>Engorde/ Yuca cocinada y picada</td>
+                        <td>210g</td>
+                        <td>21%</td>
+                        <td>3</td>
+                        <td>Mañana, Tarde, Noche</td>
+                    
                         <tr class="full-width">
-                            <td colspan="7">Segunda Cochada de Pollos</td>
+                            <td colspan="7">Segunda Compra de Pollos</td>
                         </tr>
-                        <!-- Febrero -->
-                        <tr class="highlight">
-                            <td>Febrero</td>
-                            <td>Semana 1</td>
-                            <td>Iniciador</td>
-                            <td>200</td>
-                            <td>20%</td>
-                            <td>3</td>
-                            <td>Mañana, Tarde, Noche</td>
-                        </tr>
-                        <tr>
-                            <td>Febrero</td>
-                            <td>Semana 2</td>
-                            <td>Desarrollador</td>
-                            <td>220</td>
-                            <td>18%</td>
-                            <td>3</td>
-                            <td>Mañana, Tarde, Noche</td>
-                        </tr>
-                        <tr class="highlight">
-                            <td>Febrero</td>
-                            <td>Semana 3</td>
-                            <td>Desarrollador</td>
-                            <td>230</td>
-                            <td>18%</td>
-                            <td>3</td>
-                            <td>Mañana, Tarde, Noche</td>
-                        </tr>
-                        <tr>
-                            <td>Febrero</td>
-                            <td>Semana 4</td>
-                            <td>Engordador</td>
-                            <td>250</td>
-                            <td>16%</td>
-                            <td>3</td>
-                            <td>Mañana, Tarde, Noche</td>
-                        </tr>
+                    </tr>
+                    <tr class="highlight">
+                        <td>Junio</td>
+                        <td>Semana 3</td>
+                        <td>Iniciador</td>
+                        <td>150g</td>
+                        <td>21%</td>
+                        <td>3</td>
+                        <td>Mañana, Tarde, Noche</td>
+                    </tr>
+                    <tr>
+                        <td>Junio</td>
+                        <td>Semana 4</td>
+                        <td>Iniciador</td>
+                        <td>160g</td>
+                        <td>21%</td>
+                        <td>3</td>
+                        <td>Mañana, Tarde, Noche</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>Julio</td>
+                        <td>Semana 1</td>
+                        <td>Iniciador</td>
+                        <td>180g</td>
+                        <td>21%</td>
+                        <td>3</td>
+                        <td>Mañana, Tarde, Noche</td>
+                    </tr>
+                    <tr>
+                        <td>Julio</td>
+                        <td>Semana 2</td>
+                        <td>Engorde</td>
+                        <td>190g</td>
+                        <td>21%</td>
+                        <td>3</td>
+                        <td>Mañana, Tarde, Noche</td>
+                    </tr>
+                <tr class="highlight">
+                    <td>Julio</td>
+                    <td>Semana 3</td>
+                    <td>Engorde & Cuchuco</td>
+                    <td>200g</td>
+                    <td>21%</td>
+                    <td>3</td>
+                    <td>Mañana, Tarde, Noche</td>
+                </tr>
+                <tr>
+                    <td>Julio</td>
+                    <td>Semana 4</td>
+                    <td>Engorde & Cuchuco</td>
+                    <td>210g</td>
+                    <td>21%</td>
+                    <td>3</td>
+                    <td>Mañana, Tarde, Noche</td>
+                    <tr class="full-width">
+                        <td colspan="7">Tercera Compra de Pollos</td>
+                    </tr>
+                </tr>
+                <tr class="highlight">
+                    <td>Julio</td>
+                    <td>Semana 4</td>
+                    <td>Iniciador</td>
+                    <td>150g</td>
+                    <td>21%</td>
+                    <td>3</td>
+                    <td>Mañana, Tarde, Noche</td>
+                </tr>
+                <tr>
+                    <td>Agosto</td>
+                    <td>Semana 1</td>
+                    <td>Iniciador</td>
+                    <td>160g</td>
+                    <td>21%</td>
+                    <td>3</td>
+                    <td>Mañana, Tarde, Noche</td>
+                </tr>
+                <tr class="highlight">
+                    <td>Agosto</td>
+                    <td>Semana 2</td>
+                    <td>Iniciador</td>
+                    <td>180g</td>
+                    <td>21%</td>
+                    <td>3</td>
+                    <td>Mañana, Tarde, Noche</td>
+                </tr>
+                <tr>
+                    <td>Agosto</td>
+                    <td>Semana 3</td>
+                    <td>Engorde</td>
+                    <td>190g</td>
+                    <td>21%</td>
+                    <td>3</td>
+                    <td>Mañana, Tarde, Noche</td>
+                </tr>
+            <tr class="highlight">
+                <td>Agosto</td>
+                <td>Semana 4</td>
+                <td>Engorde & Rumiante</td>
+                <td>200g</td>
+                <td>21%</td>
+                <td>3</td>
+                <td>Mañana, Tarde, Noche</td>
+            </tr>
+            <tr>
+                <td>Septiembre</td>
+                <td>Semana 1</td>
+                <td>Engorde & Rumiante</td>
+                <td>210g</td>
+                <td>21%</td>
+                <td>3</td>
+                <td>Mañana, Tarde, Noche</td>
+                
                     </table>
-        
 </section>
-<section id="cronograma"  class="content-section">
-        <img src="img/cronograma.png" alt="Cronograma de Actividades" width="100%" class=" #cronograma img">
+
+<section id="cronograma"  class="content-section img:not(#cronograma img) .cronograma-img">
+    <img src="img/cronograma.png" alt="Cronograma de Actividades" width="100%" class=" #cronograma img">
+
+</section>
  
+<section id="presupuesto" class="content-section img:not(#presupuesto img) .presupuesto-img" >
+    <img src="img/presupuesto.png" alt="Presupuesto" width="100%" class=" #presupuesto img">
+    
+
+
 </section>
-<section id="presupuesto" class="content-section">
-    <h2>Presupuesto</h2>
-    <p>Información sobre el presupuesto estimado.</p>
-</section>
+   
+    </section>
+
 <section id="anexos" class="content-section">
     <h2>Anexos</h2>
-    <p>Documentos anexos al proyecto.</p>
+    <div id="anexosContainer" class="image-grid"></div>
 </section>
 
     <!-- Otros contenidos de las secciones -->
 </main>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'F3') {
+        window.open('documentos/proyecto-actualizado.docx', '_blank');
+    }
+});
+</script>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'F1') {
+        window.open('documentos/informe-final.docx', '_blank');
+    }
+});
+</script>
+
+<script>
+    function toggleTable() {
+        const table = document.getElementById("tablaCronograma");
+        table.style.display = table.style.display === "none" || table.style.display === "" ? "block" : "none";
+    }
+</script>
 <footer>
     <img src="img/escudopie.png" alt="Escudo del Colegio" class="footer-image">
     <div class="footer-content">
@@ -235,8 +316,55 @@
 </footer>
 <!-- Franja pequeña con el mensaje de exalumno -->
 <div class="footer-small">
-    © Página elaborada por un exalumno de la Prom2023
+    © Micrositio Web elaborado con dedicacion con base al proyecto de Grado - Producción de Pollos Semicriollos
+    <p> Utlizando metodos sostenibles, el cual queda en el colegio como guia para las nuevas Generaciones. </p>
 </div>
+<script>
+    function openSection(sectionId) {
+        const sections = document.querySelectorAll('.content-section');
+        sections.forEach(section => section.classList.remove('visible'));
+        document.getElementById(sectionId).classList.add('visible');
+    }
+
+    function loadAnexos() {
+        const anexosContainer = document.getElementById('anexosContainer');
+
+        // Si ya se han cargado las imágenes, no las volvemos a agregar
+        if (anexosContainer.childElementCount > 0) {
+            openSection('anexos');
+            return;
+        }
+
+        // Lista de URLs de imágenes
+        const imageUrls = [
+            'img/anexo1.jpg',
+            'img/anexo2.jpg',
+            'img/anexo3.jpg',
+            'img/anexo4.jpg',
+            'img/anexo5.jpg',
+            'img/anexo6.jpg',
+            'img/anexo7.jpg',
+            'img/anexo8.jpg',
+            'img/anexo9.jpg',
+            'img/anexo10.jpg',
+            'img/anexo11.jpg',
+            'img/anexo12.jpg',
+            'img/anexo13.jpg',
+            'img/anexo14.jpg',
+        ];
+
+        // Crear y agregar imágenes al contenedor
+        imageUrls.forEach(url => {
+            const img = document.createElement('img');
+            img.src = url;
+            img.alt = 'Imagen de anexo';
+            anexosContainer.appendChild(img);
+        });
+
+        // Mostrar la sección de anexos
+        openSection('anexos');
+    }
+</script>
 <script>
     function openSection(sectionId) {
         const sections = document.querySelectorAll('.content-section');
