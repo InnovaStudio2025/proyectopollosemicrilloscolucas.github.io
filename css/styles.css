@@ -157,6 +157,17 @@ footer {
     font-size: 16px;
     margin: 5px 0;
 }
+.recaptcha-secure {
+    position: none;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.recaptcha-secure img {
+    width: 24px;
+    height: 24px;
+}
 .footer-image {
     width: 95px; /* tamaño de la imagen 120x120 */
     height: 115px;
