@@ -400,25 +400,29 @@ body {
         width: 60px;
     }
 }
-/* Estilo para la cuadrícula de imágenes */
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 50px;
-}
+ /* Estilo para la cuadrícula de imágenes 
 
-.image-grid img {
-    width: 80%;
-    height: 100%;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-}
+        /* Estilo para la cu
 
-.content-section {
-    display: none;
-}
+        /* Estilo para la cuadrícula de imágenes */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
 
-.content-section.visible {
-    display: block;
-}
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.visible {
+            display: block;
+        }
